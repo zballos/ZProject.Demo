@@ -5,7 +5,8 @@ namespace UnitOne.Tests.Models
 {
     public class TriangleTests
     {
-        [Fact]
+        [Fact(DisplayName = "Return Calculated Specific Area")]
+        [Trait("Triangle", "Valids")]
         public void Triangle_Area_ReturnArea()
         {
             // Arrange
@@ -20,7 +21,8 @@ namespace UnitOne.Tests.Models
             Assert.Equal(area, result);
         }
 
-        [Theory]
+        [Theory(DisplayName = "Return Calculated Areas")]
+        [Trait("Triangle", "Valids")]
         [InlineData(2, 1, 1, 1, 1)]
         [InlineData(2, 2, 2, 2, 2)]
         [InlineData(3, 2, 3, 2, 4.5)]
@@ -38,7 +40,8 @@ namespace UnitOne.Tests.Models
             Assert.Equal(area, result);
         }
 
-        [Fact]
+        [Fact(DisplayName = "Return Perimeter")]
+        [Trait("Triangle", "Valids")]
         public void Triangle_Perimeter_ReturnPerimeter()
         {
             // Arrange
