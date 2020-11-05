@@ -9,13 +9,15 @@ namespace UnitOne.Tests.Models
         public void Triangle_Area_ReturnArea()
         {
             // Arrange
+            double area = 5;
             var triangle = new Triangle(5, 2, 2, 2);
 
             // Act
             var result = triangle.Area();
 
             // Assert
-            Assert.Equal(2, result);
+            Assert.IsType<double>(result);
+            Assert.Equal(area, result);
         }
 
         [Theory]
@@ -32,6 +34,7 @@ namespace UnitOne.Tests.Models
             var result = triangle.Area();
 
             // Assert
+            Assert.IsType<double>(result);
             Assert.Equal(area, result);
         }
 
@@ -46,6 +49,7 @@ namespace UnitOne.Tests.Models
             var result = triangle.Perimeter();
 
             // Assert
+            Assert.IsType<double>(result);
             Assert.Equal(perimeter, result);
         }
     }
