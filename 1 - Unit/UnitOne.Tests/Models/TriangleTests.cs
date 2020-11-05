@@ -34,5 +34,19 @@ namespace UnitOne.Tests.Models
             // Assert
             Assert.Equal(area, result);
         }
+
+        [Fact]
+        public void Triangle_Perimeter_ReturnPerimeter()
+        {
+            // Arrange
+            double perimeter = 6;
+            var triangle = new Triangle(2, 2, 2, 2);
+
+            // Act
+            var result = triangle.Perimeter();
+
+            // Assert
+            Assert.Equal(perimeter, result);
+        }
     }
 }

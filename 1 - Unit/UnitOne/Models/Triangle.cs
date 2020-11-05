@@ -21,5 +21,10 @@ namespace UnitOne.Models
         {
             return (SideB * Height)/2;
         }
+
+        public double Perimeter()
+        {
+            return SideA + SideB + SideC;
+        }
     }
 }
