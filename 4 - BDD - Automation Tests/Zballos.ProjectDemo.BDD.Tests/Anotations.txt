@@ -1,0 +1,27 @@
+﻿User Stories
+
+pt-BR
+Como um <Papel do Negocio>
+Eu quero <Objeto do Negocio>
+Para <Benefício/Resultado Obtido>
+
+en
+As a <>
+I want to <>
+So that <>
+
+
+
+Cenários
+
+Cenário 1: Cenário que a operação da certo
+
+Dado que <o cenario possui um contexto especifico>
+E <um outro detalhe adicional>
+Quando <o usuario realizar tal ação>
+Então <alguma coisa que dará certo acontecerá>
+
+Given <>
+	And <>
+When <>
+Then <>

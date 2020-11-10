@@ -1,0 +1,10 @@
+﻿{
+    "bindingCulture":
+    {
+        "language" :"en-us" //pt-br
+    },
+    "language":
+    {
+        "feature": "en-us" //pt-br
+    }
+}
