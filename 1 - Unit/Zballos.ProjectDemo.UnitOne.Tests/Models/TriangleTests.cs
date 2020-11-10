@@ -1,7 +1,7 @@
-﻿using UnitOne.Models;
-using Xunit;
+﻿using Xunit;
+using Zballos.ProjectDemo.UnitOne.Models;
 
-namespace UnitOne.Tests.Models
+namespace Zballos.ProjectDemo.UnitOne.Tests.Models
 {
     public class TriangleTests
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnitOne.Models
+namespace Zballos.ProjectDemo.UnitOne.Models
 {
     public class Circle
     {
