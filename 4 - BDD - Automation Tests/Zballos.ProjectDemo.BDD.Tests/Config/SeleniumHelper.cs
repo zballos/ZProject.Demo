@@ -1,10 +1,9 @@
-﻿using Microsoft.VisualStudio.TestPlatform.Common.Telemetry;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Extensions;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using Zballos.ProjectDemo.BDD.Tests.Enums;
 using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
 namespace Zballos.ProjectDemo.BDD.Tests.Config
@@ -107,12 +106,18 @@ namespace Zballos.ProjectDemo.BDD.Tests.Config
                 .GetAttribute("value");
         }
 
+        public string GetValueTextBoxByClassName(string className)
+        {
+            return Wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName(className)))
+                .GetAttribute("value");
+        }
+
         public IEnumerable<IWebElement> GetListByClassName(string className)
         {
             return Wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.ClassName(className)));
         }
 
-        public bool ValidarSeElementoExistePorId(string id)
+        public bool ElementExistsById(string id)
         {
             return ElementExists(By.Id(id));
         }
@@ -146,6 +151,11 @@ namespace Zballos.ProjectDemo.BDD.Tests.Config
         private void SaveScreenShot(Screenshot screenshot, string fileName)
         {
             screenshot.SaveAsFile($"{Configuration.FolderPicture}{fileName}", ScreenshotImageFormat.Png);
+        }
+
+        public bool IsClickableByClassName(string className)
+        {
+            return Wait.Until(ExpectedConditions.ElementToBeClickable(By.ClassName(className))).Enabled;
         }
 
         public void Dispose()

@@ -3,9 +3,9 @@
 	As a fanatic user
 	I want to see the news from Flamengo
 
-@mytag
+@espn
 Scenario: Search for Flamengo news in ESPN
-	Given there are search actions
+	Given acess ESPN website
 	And it is possible to search
 	When user search for Flamengo
 	Then user will be redirected to news list

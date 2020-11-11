@@ -84,11 +84,11 @@ namespace Zballos.ProjectDemo.BDD.Tests.Soccer
         [Xunit.SkippableFactAttribute(DisplayName="Search for Flamengo news in ESPN")]
         [Xunit.TraitAttribute("FeatureTitle", "FlamengoNews")]
         [Xunit.TraitAttribute("Description", "Search for Flamengo news in ESPN")]
-        [Xunit.TraitAttribute("Category", "mytag")]
+        [Xunit.TraitAttribute("Category", "espn")]
         public virtual void SearchForFlamengoNewsInESPN()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "espn"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for Flamengo news in ESPN", null, tagsOfScenario, argumentsOfScenario);
 #line 7
@@ -112,7 +112,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
- testRunner.Given("there are search actions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("acess ESPN website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
  testRunner.And("it is possible to search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

@@ -1,4 +1,5 @@
 ﻿using Xunit;
+using Zballos.ProjectDemo.BDD.Tests.Enums;
 
 namespace Zballos.ProjectDemo.BDD.Tests.Config
 {

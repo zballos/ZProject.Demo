@@ -9,42 +9,54 @@ namespace Zballos.ProjectDemo.BDD.Tests.Soccer
     public class FlamengoNewsSteps
     {
         private readonly AutomationWebTestsFixture _testsFixture;
+        private readonly EspnWebsite _espnWebsite;
 
         public FlamengoNewsSteps(AutomationWebTestsFixture testsFixture)
         {
             _testsFixture = testsFixture;
+            _espnWebsite = new EspnWebsite(testsFixture.BrowserHelper);
         }
 
-        [Given(@"there are search actions")]
-        public void GivenThereAreSearchActions()
+        [Given(@"acess ESPN website")]
+        public void GivenAcessESPNWebsite()
         {
             // Arrange
-            _testsFixture.BrowserHelper.GoToUrl(_testsFixture.Configuration.EspnUrl);
-            _testsFixture.BrowserHelper.ClickButtonById("global-search-trigger");
-            _testsFixture.BrowserHelper.FillTextBoxByClassName("search-box", "Flamengo");
-            // Act
-            _testsFixture.BrowserHelper.ClickButtonByClassName("btn-search");
+            _espnWebsite.GoToEspn();
 
             // Assert
-            ScenarioContext.Current.Pending();
+            Assert.True(_espnWebsite.IsInHomePage());
         }
         
         [Given(@"it is possible to search")]
         public void GivenItIsPossibleToSearch()
         {
-            ScenarioContext.Current.Pending();
+            // Assert
+            Assert.True(_testsFixture.BrowserHelper.ElementExistsById("global-search-trigger"));
         }
         
         [When(@"user search for Flamengo")]
         public void WhenUserSearchForFlamengo()
         {
-            ScenarioContext.Current.Pending();
+            // Arrange
+            _espnWebsite.OpenSearchTextBox();
+
+            // Act
+            _espnWebsite.FillSearchTermInTextBox("Flamengo");
+            _espnWebsite.SubmitSearchButton();
+            
+            // Assert
+            
         }
         
         [Then(@"user will be redirected to news list")]
         public void ThenUserWillBeRedirectedToNewsList()
         {
-            ScenarioContext.Current.Pending();
+            // Act
+            var searchContent = _espnWebsite.GetSearchedTerm();
+
+            // Assert
+            Assert.Contains("Flamengo", searchContent);
+            Assert.True(_espnWebsite.IsInSearchPage());
         }
     }
 }

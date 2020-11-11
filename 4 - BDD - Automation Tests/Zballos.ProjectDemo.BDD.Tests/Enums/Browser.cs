@@ -1,4 +1,4 @@
-﻿namespace Zballos.ProjectDemo.BDD.Tests.Config
+﻿namespace Zballos.ProjectDemo.BDD.Tests.Enums
 {
     public enum Browser
     {
