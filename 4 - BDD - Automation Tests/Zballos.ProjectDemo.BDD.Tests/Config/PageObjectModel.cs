@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Zballos.ProjectDemo.BDD.Tests.Config
+﻿namespace Zballos.ProjectDemo.BDD.Tests.Config
 {
     public abstract class PageObjectModel
     {
@@ -17,7 +13,5 @@ namespace Zballos.ProjectDemo.BDD.Tests.Config
         {
             return Helper.GetUrl();
         }
-
-        //public void GoToUrl(string.)_{
     }
 }

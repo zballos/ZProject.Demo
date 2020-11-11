@@ -11,11 +11,6 @@ namespace Zballos.ProjectDemo.BDD.Tests.Soccer
             Helper.GoToUrl(Helper.Configuration.EspnUrl);
         }
 
-        public string GetUrl()
-        {
-            return Helper.GetUrl();
-        }
-
         public bool IsInHomePage()
         {
             return Helper.ValidUrlContent(Helper.Configuration.EspnUrl);
