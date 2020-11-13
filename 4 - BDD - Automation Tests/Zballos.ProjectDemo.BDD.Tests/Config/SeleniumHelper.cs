@@ -14,11 +14,10 @@ namespace Zballos.ProjectDemo.BDD.Tests.Config
         public readonly ConfigurationHelper Configuration;
         public WebDriverWait Wait;
 
-        public SeleniumHelper(Browser browser, ConfigurationHelper configuration, bool headless = false)
+        public SeleniumHelper(Browser browser, ConfigurationHelper configuration)
         {
             Configuration = configuration;
-            WebDriver = WebDriverFactory.CreateWebDriver(browser, Configuration.WebDrivers, headless);
-            WebDriver.Manage().Window.Maximize();
+            WebDriver = WebDriverFactory.CreateWebDriver(browser, Configuration.WebDrivers, Configuration.RunHeadless);
             Wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(30));
         }
 

@@ -17,5 +17,6 @@ namespace Zballos.ProjectDemo.BDD.Tests.Config
         public string EspnUrl => $"{_config.GetSection("Sites").GetSection("ESPN").Value}";
         public string UolUrl => $"{_config.GetSection("Sites").GetSection("UOL").Value}";
         public string FolderPicture => $"{_config.GetSection("Folder").Value}";
+        public bool RunHeadless => bool.Parse(_config.GetSection("RunHeadless").Value);
     }
 }

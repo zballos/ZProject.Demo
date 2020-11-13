@@ -1,9 +1,13 @@
-﻿using Zballos.ProjectDemo.BDD.Tests.Config;
+﻿using OpenQA.Selenium;
+using System.Collections.Generic;
+using Zballos.ProjectDemo.BDD.Tests.Config;
 
 namespace Zballos.ProjectDemo.BDD.Tests.Soccer
 {
     public class EspnWebsite : PageObjectModel
     {
+        protected IWebElement _newsElement;
+
         public EspnWebsite(SeleniumHelper helper) : base(helper) { }
 
         public void GoToEspn()
@@ -39,6 +43,21 @@ namespace Zballos.ProjectDemo.BDD.Tests.Soccer
         public void SubmitSearchButton()
         {
             Helper.ClickButtonByClassName("btn-search");
+        }
+
+        public IWebElement GetFirstNewsElementByXPath(string xPath)
+        {
+            return Helper.GetElementByXPath(xPath);
+        }
+
+        public void AddFirstNews(IWebElement newsElement)
+        {
+            _newsElement = newsElement;
+        }
+
+        public IWebElement GetFirstNewsElement()
+        {
+            return _newsElement;
         }
     }
 }

@@ -29,7 +29,14 @@ namespace Zballos.ProjectDemo.BDD.Tests.Config
                     };
 
                     if (headless)
-                        optionsEdge.AddArgument("--headless");
+                        optionsEdge.AddArguments(
+                            "--headless", 
+                            "--disable-gpu", 
+                            "--window-size=1920,1080", 
+                            "--disable-extensions",
+                            "--proxy-server='direct://'",
+                            "--proxy-bypass-list=*",
+                            "--start-maximized");
 
                     webDriver = new EdgeDriver(pathDriver, optionsEdge);
                     break;
