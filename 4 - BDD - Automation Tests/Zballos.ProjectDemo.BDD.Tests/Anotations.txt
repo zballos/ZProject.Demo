@@ -25,3 +25,9 @@ Given <>
 	And <>
 When <>
 Then <>
+
+
+command automation test
+
+    - name: Automation Test
+      run: dotnet test --no-restore --verbosity normal 4\ -\ BDD\ -\ Automation\ Tests/Zballos.ProjectDemo.BDD.Tests/Zballos.ProjectDemo.BDD.Tests.csproj

@@ -23,5 +23,3 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Unit Test
       run: dotnet test --no-restore --verbosity normal 1\ -\ Unit/Zballos.ProjectDemo.UnitOne.Tests/Zballos.ProjectDemo.UnitOne.Tests.csproj
-    - name: Automation Test
-      run: dotnet test --no-restore --verbosity normal 4\ -\ BDD\ -\ Automation\ Tests/Zballos.ProjectDemo.BDD.Tests/Zballos.ProjectDemo.BDD.Tests.csproj
