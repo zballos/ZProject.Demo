@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Zballos.ProjectDemo.UnitOne.Models
+﻿namespace Zballos.ProjectDemo.UnitOne.Models
 {
     public class Triangle
     {

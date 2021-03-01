@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
+    <ProjectGuid>0f7610a2-09bf-4e45-94aa-7fde3d50631b</ProjectGuid>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 

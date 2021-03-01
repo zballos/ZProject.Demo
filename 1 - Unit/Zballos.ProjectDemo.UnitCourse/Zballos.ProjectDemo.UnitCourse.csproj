@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ProjectGuid>a0aa2ce1-fdf2-4746-aedc-8c248a7e2765</ProjectGuid>
+    <CodeAnalysisRuleSet>..\..\.sonarlint\zballos-projectdemocsharp.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\.sonarlint\zballos-projectdemo\CSharp\SonarLint.xml" Link="SonarLint.xml" />
+  </ItemGroup>
 
 </Project>

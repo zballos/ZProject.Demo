@@ -1,4 +1,6 @@
-﻿namespace Zballos.ProjectDemo.UnitCourse.Persons
+﻿using System;
+
+namespace Zballos.ProjectDemo.UnitCourse.Persons
 {
     public class Person
     {
@@ -17,5 +19,7 @@
                    FirstName == person.FirstName &&
                    LastName == person.LastName;
         }
+
+        public override int GetHashCode() => HashCode.Combine(FirstName, LastName);
     }
 }

@@ -2,14 +2,18 @@ using System;
 using System.ComponentModel;
 using System.IO;
 using Xunit;
-using Zballos.ProjectDemo.UnitCourse;
 
-namespace ZProject.ProjectDemo.UnitCourse.Tests
+namespace Zballos.ProjectDemo.UnitCourse.Tests
 {
     public class FileProcessTest
     {
         private const string FILE_NAME = @"TestingFile.txt";
         private const string BAD_FILE_NAME = @"\TestingFile.txt";
+
+        private static string BaseDir()
+        {
+            return Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+        }
 
         [Fact]
         [Description("Check file does exists")]
@@ -23,11 +27,6 @@ namespace ZProject.ProjectDemo.UnitCourse.Tests
             fromCall = fileProcess.FileExists(filePath);
 
             Assert.True(fromCall);
-        }
-
-        private string BaseDir()
-        {
-            return Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
         }
 
         [Fact]

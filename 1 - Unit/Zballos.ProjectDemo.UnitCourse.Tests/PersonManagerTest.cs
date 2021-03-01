@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Xunit;
 using Zballos.ProjectDemo.UnitCourse.Persons;
 
-namespace ZProject.ProjectDemo.UnitCourse.Tests
+namespace Zballos.ProjectDemo.UnitCourse.Tests
 {
     public class PersonManagerTest
     {

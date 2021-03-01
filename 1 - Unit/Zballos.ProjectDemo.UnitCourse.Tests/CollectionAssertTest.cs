@@ -2,7 +2,7 @@
 using Xunit;
 using Zballos.ProjectDemo.UnitCourse.Persons;
 
-namespace ZProject.ProjectDemo.UnitCourse.Tests
+namespace Zballos.ProjectDemo.UnitCourse.Tests
 {
     public class CollectionAssertTest
     {

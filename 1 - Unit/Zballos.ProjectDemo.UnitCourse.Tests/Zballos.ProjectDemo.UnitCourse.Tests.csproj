@@ -2,12 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
     <IsPackable>false</IsPackable>
-
-    <AssemblyName>Zballos.ProjectDemo.UnitCourse.Tests</AssemblyName>
-
-    <RootNamespace>Zballos.ProjectDemo.UnitCourse.Tests</RootNamespace>
+    <ProjectGuid>a15ed007-62cf-4141-9cb7-0b8fe8d20dd7</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>
