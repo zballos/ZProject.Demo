@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <ProjectGuid>d1613d43-efa2-4461-9208-d9e97760059a</ProjectGuid>
+    <ProjectGuid>a0aa2ce1-fdf2-4746-aedc-8c248a7e2765</ProjectGuid>
     <CodeAnalysisRuleSet>..\..\.sonarlint\zballos-projectdemocsharp.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
